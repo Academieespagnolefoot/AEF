@@ -1060,6 +1060,10 @@ a:visited {
     }
 }
 
+.content .text h1 {
+    font-size: 1.5em;
+}
+
 .content img {
     /* filter: saturate(1.5) hue-rotate(-30deg); */
     filter: saturate(1.5);
