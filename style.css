@@ -5,3 +5,11 @@ body {
     margin: 0;
     user-select: none;
 }
+
+.backGrey {
+    background: linear-gradient(to bottom right, #f2f2f2, #e0e8ea);
+}
+
+.backPink {
+    background: linear-gradient(to bottom right, #fdf7fd, #fcecfc);
+}

@@ -1,17 +1,22 @@
 @import url("shadows/common.css");
 
 :host {
-    background-color: white;
     display: block;
 }
 
 .root {
     align-items: stretch;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    max-width: 60%;
+}
+
+@media only screen and (max-width: 768px) {
+    .root {
+        max-width: unset;
+    }
 }
 
 .root .title {
@@ -27,6 +32,7 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    padding-bottom: 32px;
 }
 
 @media only screen and (max-width: 768px) {

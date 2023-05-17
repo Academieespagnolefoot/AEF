@@ -1,13 +1,12 @@
 @import url("shadows/common.css");
 
 :host {
-    background-color: white;
     display: block;
+    padding: 16px 0;
 }
 
 .root {
     align-items: stretch;
-    background-color: white;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -86,7 +85,7 @@
     width: 300px;
 }
 
-.imageCarousel  {
+.imageMethodologie  {
     box-sizing: border-box;
     display: flex;
     height: 400px;
@@ -95,13 +94,19 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .imageCarousel {
+    .imageMethodologie {
         max-height: 300px;
         width: 100%;
     }
 }
 
-.imageCarousel sdw-carousel-arrows {
+.imageMethodologie img {
+    border-radius: 16px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.imageMethodologie sdw-carousel-arrows {
     border-radius: 16px;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
     overflow: hidden;

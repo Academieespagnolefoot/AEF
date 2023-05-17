@@ -1,13 +1,11 @@
 @import url("shadows/common.css");
 
 :host {
-    background-color: white;
     display: block;
 }
 
 .root {
     align-items: stretch;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

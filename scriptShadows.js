@@ -69,13 +69,11 @@ a:visited {
 }
 
 :host {
-    background-color: white;
     display: block;
 }
 
 .root {
     align-items: stretch;
-    background-color: white;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -160,13 +158,12 @@ a:visited {
 }
 
 :host {
-    background-color: white;
     display: block;
+    padding: 16px 0;
 }
 
 .root {
     align-items: stretch;
-    background-color: white;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -245,7 +242,7 @@ a:visited {
     width: 300px;
 }
 
-.imageCarousel  {
+.imageMethodologie  {
     box-sizing: border-box;
     display: flex;
     height: 400px;
@@ -254,17 +251,24 @@ a:visited {
 }
 
 @media only screen and (max-width: 768px) {
-    .imageCarousel {
+    .imageMethodologie {
         max-height: 300px;
         width: 100%;
     }
 }
 
-.imageCarousel sdw-carousel-arrows {
+.imageMethodologie img {
     border-radius: 16px;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
     overflow: hidden;
-}`,
+}
+
+.imageMethodologie sdw-carousel-arrows {
+    border-radius: 16px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+`,
 	html: `
 ` 
 }
@@ -304,13 +308,11 @@ a:visited {
 }
 
 :host {
-    background-color: white;
     display: block;
 }
 
 .root {
     align-items: stretch;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -333,6 +335,85 @@ a:visited {
 }
 
 class sdwAcademySignature extends ShadowObject {
+    
+    constructor () {
+        super()
+    }
+
+    async load () {
+        this.elmRoot.classList.add("autocenter")
+    }
+}
+
+shadows["sdwAcademySocial"] = {
+	tag: "sdw-academy-social",
+	css: `
+.autocenter {
+    margin: 0 auto;
+    width: calc(100% - 32px);
+    max-width: 1024px;
+}
+
+a {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+:host {
+    display: block;
+}
+
+.root {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.root .texts {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    overflow: hidden;
+}
+
+.root .images {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0;
+}
+
+.root .images > img {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin: 8px;
+    max-width: calc(25% - 16px);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    .root .images > img {
+        max-width: calc(50% - 16px);
+    }
+}`,
+	html: `
+` 
+}
+
+class sdwAcademySocial extends ShadowObject {
     
     constructor () {
         super()
@@ -367,17 +448,22 @@ a:visited {
 }
 
 :host {
-    background-color: white;
     display: block;
 }
 
 .root {
     align-items: stretch;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    max-width: 60%;
+}
+
+@media only screen and (max-width: 768px) {
+    .root {
+        max-width: unset;
+    }
 }
 
 .root .title {
@@ -393,6 +479,7 @@ a:visited {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    padding-bottom: 32px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -479,17 +566,18 @@ a:visited {
 }
 
 :host {
-    background-color: white;
     display: block;
 }
 
 .root {
-    padding-top: 16px;
+    display: flex;
+    justify-content: center;
 }
 
 .root h1 {
-    color: #0280cd;
+    color: rgb(50, 50, 50);
     margin: 0;
+    padding: 16px 0;
     text-align: center;
 }
 
@@ -503,6 +591,67 @@ a:visited {
 }
 
 class sdwAcademyTitle extends ShadowObject {
+    
+    constructor () {
+        super()
+    }
+
+    async load () {
+        this.elmRoot.classList.add("autocenter")
+    }
+}
+
+shadows["sdwAcademyTitleBig"] = {
+	tag: "sdw-academy-title-big",
+	css: `
+.autocenter {
+    margin: 0 auto;
+    width: calc(100% - 32px);
+    max-width: 1024px;
+}
+
+a {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+:host {
+    display: block;
+}
+
+.root {
+    display: flex;
+    justify-content: center;
+}
+
+.root h1 {
+    color: #0280cd;
+    font-size: 3em;
+    margin: 0;
+    padding: 16px 0;
+    text-align: center;
+    max-width: 650px;
+}
+
+@media only screen and (max-width: 768px) {
+    .root h1 {
+        font-size: 2.25em;
+    }
+}`,
+	html: `
+` 
+}
+
+class sdwAcademyTitleBig extends ShadowObject {
     
     constructor () {
         super()
@@ -639,9 +788,7 @@ a:visited {
     width: 16px;
 }`,
 	html: `
-<div class="contents" data-carousel="contents">
-
-</div>
+<div class="contents" data-carousel="contents"></div>
 <div class="leftArrowBox">
     <div class="leftArrow"></div>
 </div>
@@ -843,7 +990,8 @@ a:visited {
 }
 
 :host {
-    background-color: rgba(255, 255, 255, 0.65);
+    /* background-color: rgba(255, 255, 255, 0.65); */
+    background-color: black;
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     backdrop-filter: blur(10px) saturate(180%);
     display: block;

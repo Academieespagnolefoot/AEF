@@ -10,14 +10,16 @@
 }
 
 .root h1 {
-    color: rgb(50, 50, 50);
+    color: #0280cd;
+    font-size: 3em;
     margin: 0;
     padding: 16px 0;
     text-align: center;
+    max-width: 650px;
 }
 
 @media only screen and (max-width: 768px) {
     .root h1 {
-        font-size: 1.75em;
+        font-size: 2.25em;
     }
 }

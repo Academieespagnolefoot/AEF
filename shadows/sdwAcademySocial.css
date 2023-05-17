@@ -1,0 +1,43 @@
+@import url("shadows/common.css");
+
+:host {
+    display: block;
+}
+
+.root {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.root .texts {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    overflow: hidden;
+}
+
+.root .images {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0;
+}
+
+.root .images > img {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin: 8px;
+    max-width: calc(25% - 16px);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    .root .images > img {
+        max-width: calc(50% - 16px);
+    }
+}
