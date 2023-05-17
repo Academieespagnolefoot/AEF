@@ -9,6 +9,7 @@ async function compileShadows () {
     let shadows = await getShadows()
     let shadowsData = ""
 
+    shadowsData += "// Compiled: " + new Date().toISOString() + "\n"
     shadowsData += "var shadows = {}\n"
     shadowsData += addLoadShadows() + "\n"
     shadowsData += "\n" + await fs.readFile(`${path}/shadowObject.js`, { encoding: 'utf8' }) + "\n"
