@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    max-width: 60%;
+    max-width: 800px;
 }
 
 @media only screen and (max-width: 768px) {
