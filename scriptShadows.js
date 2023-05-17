@@ -1,4 +1,4 @@
-// Compiled: 2023-05-17T09:58:15.882Z
+// Compiled: 2023-05-17T10:06:26.983Z
 var shadows = {}
 
 window.addEventListener("load", loadShadows)
@@ -458,7 +458,7 @@ a:visited {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    max-width: 60%;
+    max-width: 800px;
 }
 
 @media only screen and (max-width: 768px) {

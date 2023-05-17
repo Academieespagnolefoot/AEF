@@ -11,5 +11,5 @@ body {
 }
 
 .backPink {
-    background: linear-gradient(to bottom right, #fdf7fd, #fcecfc);
+    background: linear-gradient(to bottom left, #fcecfc, #fdf7fd);
 }
