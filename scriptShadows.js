@@ -1,4 +1,4 @@
-// Compiled: 2023-05-17T10:06:26.983Z
+// Compiled: 2023-05-18T07:25:13.553Z
 var shadows = {}
 
 window.addEventListener("load", loadShadows)
@@ -392,7 +392,7 @@ a:visited {
 .root .images {
     display: flex;
     flex-wrap: wrap;
-    padding: 16px 0;
+    padding: 16px;
 }
 
 .root .images > img {
