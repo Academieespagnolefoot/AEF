@@ -1,4 +1,4 @@
-// Compiled: 2023-06-07T08:28:26.217Z
+// Compiled: 2023-06-07T08:33:10.628Z
 var shadows = {}
 
 window.addEventListener("load", loadShadows)
@@ -1055,6 +1055,94 @@ class sdwHeader extends ShadowObject {
     }
 }
 
+shadows["sdwPromoButton"] = {
+	tag: "sdw-promo-button",
+	css: `
+.autocenter {
+    margin: 0 auto;
+    width: calc(100% - 32px);
+    max-width: 1024px;
+}
+
+a {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+:host {
+    background-color: #443B24;
+    display: block;
+    padding-top: 16px;
+}
+
+.root {
+    align-items: center;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    overflow: hidden;
+    padding: 16px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .root {
+        font-size: 0.9em;
+    }
+}
+
+.root .row {
+    display: flex;
+    margin: 8px 0;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .root .row {
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+.root .center {
+    justify-content: center;
+}
+
+.root .buttonLink {
+    background-color: #f66308;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 16px 0;
+    padding: 8px 16px;
+    text-decoration: none;
+}`,
+	html: `
+` 
+}
+
+class sdwPromoButton extends ShadowObject {
+    
+    constructor () {
+        super()
+    }
+
+    async load () {
+        this.elmRoot.classList.add("autocenter")
+    }
+}
+
 shadows["sdwPromoContact"] = {
 	tag: "sdw-promo-contact",
 	css: `
@@ -1112,10 +1200,6 @@ a:visited {
         flex-direction: column;
         width: 90%;
     }
-}
-
-.root .center {
-    justify-content: center;
 }
 
 .root .row .field {

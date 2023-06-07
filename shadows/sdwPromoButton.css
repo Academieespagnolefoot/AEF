@@ -3,7 +3,7 @@
 :host {
     background-color: #443B24;
     display: block;
-    padding: 16px 0;
+    padding-top: 16px;
 }
 
 .root {
@@ -36,18 +36,8 @@
     }
 }
 
-.root .row .field {
-    box-sizing: border-box;
-    color: gray;
-    padding: 0 2px;
-    text-align: right;
-    width: 50%;
-}
-
-@media only screen and (max-width: 768px) {
-    .root .row .field {
-        text-align: left;
-    }
+.root .center {
+    justify-content: center;
 }
 
 .root .buttonLink {
