@@ -1,4 +1,4 @@
-// Compiled: 2023-05-18T07:25:13.553Z
+// Compiled: 2023-06-07T08:28:26.217Z
 var shadows = {}
 
 window.addEventListener("load", loadShadows)
@@ -1114,6 +1114,10 @@ a:visited {
     }
 }
 
+.root .center {
+    justify-content: center;
+}
+
 .root .row .field {
     box-sizing: border-box;
     color: gray;
@@ -1126,6 +1130,17 @@ a:visited {
     .root .row .field {
         text-align: left;
     }
+}
+
+.root .buttonLink {
+    background-color: #f66308;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 16px 0;
+    padding: 8px 16px;
+    text-decoration: none;
 }`,
 	html: `
 ` 
